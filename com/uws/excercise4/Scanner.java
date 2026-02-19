@@ -1,5 +1,7 @@
 package com.uws.excercise4;
 
-public class Scanner {
+public interface Scanner { 
+    
+    void scan(Document document); 
 
 }

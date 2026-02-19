@@ -1,5 +1,5 @@
 package com.uws.excercise4;
 
-public class Faxer {
-
+public interface Faxer { 
+    void fax(Document document); 
 }

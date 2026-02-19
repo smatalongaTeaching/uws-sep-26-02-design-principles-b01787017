@@ -1,5 +1,7 @@
 package com.uws.excercise4;
 
-public class Copier {
-
+public interface Copier { 
+    
+    void copy(Document document); 
+    
 }

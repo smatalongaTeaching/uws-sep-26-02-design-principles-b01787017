@@ -1,5 +1,6 @@
 package com.uws.excercise4;
 
-public class Printer {
+public interface Printer { 
+    void print(Document document); 
 
 }
