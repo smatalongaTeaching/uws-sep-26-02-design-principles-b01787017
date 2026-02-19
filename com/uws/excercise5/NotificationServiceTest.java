@@ -2,32 +2,19 @@ package com.uws.excercise5;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import static org.mockito.Mockito.*;
-
-
-
 
 class NotificationServiceTest {
 
     private NotificationService notificationService;
-    private EmailSender mockEmailSender;
-    private SMSSender mockSmsSender;
+    private NotificationChannel mockEmailChannel;
+    private NotificationChannel mockSmsChannel;
 
     @BeforeEach
-    void setUp() throws Exception {
-        // Use reflection to inject mocks since NotificationService creates its own dependencies
-        notificationService = new NotificationService();
-        mockEmailSender = Mockito.mock(EmailSender.class);
-        mockSmsSender = Mockito.mock(SMSSender.class);
-
-        java.lang.reflect.Field emailSenderField = NotificationService.class.getDeclaredField("emailSender");
-        emailSenderField.setAccessible(true);
-        emailSenderField.set(notificationService, mockEmailSender);
-
-        java.lang.reflect.Field smsSenderField = NotificationService.class.getDeclaredField("smsSender");
-        smsSenderField.setAccessible(true);
-        smsSenderField.set(notificationService, mockSmsSender);
+    void setUp() {
+        mockEmailChannel = mock(NotificationChannel.class);
+        mockSmsChannel = mock(NotificationChannel.class);
+        notificationService = new NotificationService(mockEmailChannel, mockSmsChannel);
     }
 
     @Test
@@ -37,8 +24,8 @@ class NotificationServiceTest {
 
         notificationService.sendNotification(email, message);
 
-        verify(mockEmailSender, times(1)).sendEmail(email, "Notification", message);
-        verify(mockSmsSender, never()).sendSMS(anyString(), anyString());
+        verify(mockEmailChannel, times(1)).send(email, message);
+        verify(mockSmsChannel, never()).send(anyString(), anyString());
     }
 
     @Test
@@ -48,7 +35,7 @@ class NotificationServiceTest {
 
         notificationService.sendNotification(phone, message);
 
-        verify(mockSmsSender, times(1)).sendSMS(phone, message);
-        verify(mockEmailSender, never()).sendEmail(anyString(), anyString(), anyString());
+        verify(mockSmsChannel, times(1)).send(phone, message);
+        verify(mockEmailChannel, never()).send(anyString(), anyString());
     }
 }
