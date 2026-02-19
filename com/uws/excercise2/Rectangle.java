@@ -1,10 +1,9 @@
 package com.uws.excercise2;
 
-public class Rectangle {
+public class Rectangle implements Shape {
     private double width;
     private double height;
     
-    // Constructor, getters, setters...
     
     public Rectangle(double width, double height) {
         this.width = width;
@@ -17,6 +16,11 @@ public class Rectangle {
     
     public double getHeight() {
         return height;
+    }
+
+    @Override
+    public double area() {
+        return width * height;
     }
 }
 
