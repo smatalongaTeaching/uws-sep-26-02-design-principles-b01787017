@@ -1,4 +1,4 @@
-package com.uws.excercise1;
+package com.uws.excercise1.src;
 
 // Original code with SRP violation
 public class Employee {

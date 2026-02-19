@@ -1,9 +1,12 @@
-package com.uws.excercise1;
+package com.uws.excercise1.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
+
+import com.uws.excercise1.src.Employee;
+import com.uws.excercise1.src.EmployeePayRoll;
 
 public class EmployeePayrollTest {
 

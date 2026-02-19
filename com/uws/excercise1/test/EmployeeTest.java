@@ -1,7 +1,9 @@
-package com.uws.excercise1;
+package com.uws.excercise1.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+
+import com.uws.excercise1.src.Employee;
 
 public class EmployeeTest {
 
