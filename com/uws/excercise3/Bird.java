@@ -12,9 +12,6 @@ public class Bird {
     public String getName() {
         return name;
     }
-    
-    public void fly() {
-        System.out.println(name + " is flying high...");
-    }
+
 
 }
