@@ -1,0 +1,24 @@
+interface NotificationChannel {
+  + send(recipient: String, message: String): void
+}
+
+class EmailSender implements NotificationChannel {
+  + send(recipient: String, message: String): void
+  + sendEmail(recipient: String, subject: String, message: String): void
+}
+
+class SMSSender implements NotificationChannel {
+  + send(recipient: String, message: String): void
+  + sendSMS(phoneNumber: String, message: String): void
+}
+
+class NotificationService {
+  - emailChannel: NotificationChannel
+  - smsChannel: NotificationChannel
+  + NotificationService(emailChannel: NotificationChannel, smsChannel: NotificationChannel)
+  + sendNotification(user: String, message: String): void
+}
+
+NotificationService --> NotificationChannel
+EmailSender ..|> NotificationChannel
+SMSSender ..|> NotificationChannel
