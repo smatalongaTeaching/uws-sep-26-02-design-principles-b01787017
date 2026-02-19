@@ -1,4 +1,4 @@
-package com.uws.excercise1.src;
+package com.uws.excercise1;
 
 public class MainClass {
     
@@ -12,8 +12,8 @@ public class MainClass {
         System.out.println("ID: " + emp2.getId());
         System.out.println("Name: " + emp2.getName());
 
-        Employee emp2 = repository.loadFromDatabase(999);
-        if (emp2 == null) {
+        Employee emp3 = repository.loadFromDatabase(999);
+        if (emp3 == null) {
             System.out.println("Employee with ID 999 does not exist.");
         }
 

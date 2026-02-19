@@ -1,4 +1,4 @@
-package com.uws.excercise1.src;
+package com.uws.excercise1;
 
 import java.io.*;
 import javax.xml.parsers.*;

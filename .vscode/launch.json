@@ -2,33 +2,29 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "MainClass",
-            "request": "launch",
-            "mainClass": "com.uws.excercise3.MainClass",
-            "projectName": "UWS_SEP_SOLID_eb7555f5"
-        },
-        {
-            "type": "java",
-            "name": "MainClass",
-            "request": "launch",
-            "mainClass": "com.uws.excercise1.MainClass",
-            "projectName": "UWS_SEP_SOLID_eb7555f5"
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Main_Excercise1",
-            "request": "launch",
-            "mainClass": "com.excercise1.MainClass"
-        }
-    ]
+
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Exercise 3 MainClass",
+      "request": "launch",
+      "mainClass": "com.uws.excercise3.MainClass",
+      "projectName": "UWS_SEP_SOLID_eb7555f5"
+    },
+    {
+      "type": "java",
+      "name": "Exercise 1 MainClass",
+      "request": "launch",
+      "mainClass": "com.uws.excercise1.MainClass",
+      "projectName": "UWS_SEP_SOLID_eb7555f5"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    }
+  ]
+
 }
