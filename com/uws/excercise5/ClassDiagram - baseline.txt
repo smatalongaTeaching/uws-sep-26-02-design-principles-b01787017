@@ -1,0 +1,17 @@
+class NotificationService {
+  - emailSender: EmailSender
+  - smsSender: SMSSender
+  + NotificationService()
+  + sendNotification(user: String, message: String): void
+}
+
+class EmailSender {
+  + sendEmail(recipient: String, subject: String, message: String): void
+}
+
+class SMSSender {
+  + sendSMS(phoneNumber: String, message: String): void
+}
+
+NotificationService --> EmailSender
+NotificationService --> SMSSender
