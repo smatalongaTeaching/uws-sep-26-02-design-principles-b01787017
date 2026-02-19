@@ -1,6 +1,11 @@
-package com.uws.excercise2;
+package com.uws.excercise2.test;
 
 import org.junit.jupiter.api.Test;
+
+import com.uws.excercise2.src.AreaCalculator;
+import com.uws.excercise2.src.Circle;
+import com.uws.excercise2.src.Rectangle;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AreaCalculatorTest {

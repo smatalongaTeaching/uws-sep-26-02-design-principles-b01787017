@@ -1,4 +1,4 @@
-package com.uws.excercise2;
+package com.uws.excercise2.src;
 
 public class Rectangle implements Shape {
     private double width;
