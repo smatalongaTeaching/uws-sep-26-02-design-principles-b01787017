@@ -1,0 +1,33 @@
+classDiagram
+    class Document {
+        -String name
+        +Document(String name)
+        +String getName()
+    }
+
+    class Machine {
+        <<interface>>
+        +print(Document)
+        +scan(Document)
+        +fax(Document)
+        +copy(Document)
+    }
+
+    class MultiFunctionPrinter {
+        +print(Document)
+        +scan(Document)
+        +fax(Document)
+        +copy(Document)
+    }
+
+    class SimplePrinter {
+        +print(Document)
+        +scan(Document)
+        +fax(Document)
+        +copy(Document)
+    }
+
+    Machine <|.. MultiFunctionPrinter
+    Machine <|.. SimplePrinter
+    MultiFunctionPrinter ..> Document
+    SimplePrinter ..> Document
