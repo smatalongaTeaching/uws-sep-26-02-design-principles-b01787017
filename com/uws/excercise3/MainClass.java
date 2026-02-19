@@ -14,20 +14,19 @@ public class MainClass {
         birds.add(simpleBird);
         birds.add(sparrow);
         birds.add(penguin);
-        
-        try {
-            MainClass.letBirdsFly(birds); 
-            ((Penguin) penguin).swim(); // This should work fine but is unreachable in the current context
-        } catch (UnsupportedOperationException e) {
-            System.out.println(e.getMessage());
-        }
-        
+
+        ArrayList<Flyable> flyingThings = new ArrayList<>();
+        flyingThings.add((Flyable) sparrow);
+
+        MainClass.letBirdsFly(flyingThings);
+        ((Penguin) penguin).swim();
     }
 
-    public static void letBirdsFly(List<Bird> birds) {
-        for (Bird bird : birds) {
-            bird.fly(); // This will break for Penguin objects
+    public static void letBirdsFly(List<Flyable> birds) {
+        for (Flyable bird : birds) {
+            bird.fly();
         }
     }
+
 
 }
